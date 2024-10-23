@@ -1,11 +1,11 @@
-uuid: 474a37a3-f858-4da5-859b-db58da509619
+uuid: b00747b5-87ec-4a10-bda8-175168e7b6f3
 langcode: en
 status: false
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: fVFfJv_GzBRE-wpRHbfD5a3VjnhbEOXG6lvRd3uaccY
+  default_config_hash: r_A0T3aTqGDwLyvoH7wLps-0PM--RHlS8UsiJe_Ac64
 id: node.search_index
 label: 'Search index'
 description: ''

@@ -1,9 +1,10 @@
-uuid: d8ef38fd-796c-45de-89d3-1dd4a986e209
+uuid: 7924a631-c1bd-4950-85da-d505b14be72d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
+    - filter.format.full_html
     - node.type.article
   module:
     - text
@@ -22,5 +23,6 @@ default_value_callback: ''
 settings:
   display_summary: true
   required_summary: false
-  allowed_formats: {  }
+  allowed_formats:
+    - full_html
 field_type: text_with_summary

@@ -1,14 +1,17 @@
-uuid: 3a0e46e2-7e09-44cb-885d-80e094e4f39c
+uuid: b85b21b9-553b-45d5-bdc9-b9b312bb5eb2
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.responsive_3x2
   module:
     - editor
+    - media
 _core:
-  default_config_hash: HvAE4vD_4-nvhwLobIN3k5rTE9zq9AQG8UScfnwuKQo
+  default_config_hash: ENBvOU9rRkKN6OaSd_TI6mbzwdZIHWTwaW3p00ccJ_8
 name: 'Full HTML'
 format: full_html
-weight: 2
+weight: -10
 filters:
   editor_file_reference:
     id: editor_file_reference
@@ -28,6 +31,15 @@ filters:
     status: true
     weight: 9
     settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
@@ -40,3 +52,18 @@ filters:
     status: true
     weight: 15
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: responsive_3x2
+      allowed_view_modes:
+        responsive_3x2: responsive_3x2
+      allowed_media_types:
+        audio: audio
+        document: document
+        image: image
+        remote_video: remote_video
+        video: video

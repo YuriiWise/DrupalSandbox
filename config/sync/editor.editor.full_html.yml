@@ -1,4 +1,4 @@
-uuid: 27963cd0-917d-40eb-9450-ec3e21445f09
+uuid: 1e52207f-e48c-4533-b06d-1eff7b748a5a
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor5
 _core:
-  default_config_hash: m3pL_vbOaNdIkaQFbupVk6gUbrQgO6j9KxoL6yw6yNw
+  default_config_hash: GsVubFBy-F2r3MNRZEGfWgxB4QrSBfgNnOsCspqLJoQ
 format: full_html
 editor: ckeditor5
 settings:
@@ -26,59 +26,42 @@ settings:
       - numberedList
       - '|'
       - blockQuote
-      - drupalInsertImage
+      - drupalMedia
       - insertTable
       - horizontalLine
       - '|'
       - heading
-      - codeBlock
       - '|'
       - sourceEditing
+      - aickeditor
   plugins:
-    ckeditor5_codeBlock:
-      languages:
-        -
-          label: 'Plain text'
-          language: plaintext
-        -
-          label: C
-          language: c
-        -
-          label: 'C#'
-          language: cs
-        -
-          label: C++
-          language: cpp
-        -
-          label: CSS
-          language: css
-        -
-          label: Diff
-          language: diff
-        -
-          label: HTML
-          language: html
-        -
-          label: Java
-          language: java
-        -
-          label: JavaScript
-          language: javascript
-        -
-          label: PHP
-          language: php
-        -
-          label: Python
-          language: python
-        -
-          label: Ruby
-          language: ruby
-        -
-          label: TypeScript
-          language: typescript
-        -
-          label: XML
-          language: xml
+    ai_ckeditor_ai:
+      dialog:
+        autoresize: 'min-width: 600px'
+        height: '750'
+        width: '900'
+        dialog_class: ai-ckeditor-modal
+      plugins:
+        ai_ckeditor_completion:
+          provider: ''
+          enabled: true
+        ai_ckeditor_help:
+          enabled: false
+        ai_ckeditor_summarize:
+          provider: ''
+          enabled: true
+        ai_ckeditor_tone:
+          autocreate: false
+          provider: ''
+          tone_vocabulary: recipe_category
+          use_description: 0
+          enabled: true
+        ai_ckeditor_translate:
+          autocreate: false
+          provider: ''
+          translate_vocabulary: recipe_category
+          use_description: false
+          enabled: true
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -86,15 +69,15 @@ settings:
         - heading4
         - heading5
         - heading6
-    ckeditor5_imageResize:
-      allow_resize: true
     ckeditor5_list:
       properties:
-        reversed: true
-        startIndex: true
+        reversed: false
+        startIndex: false
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: true
   scheme: public
